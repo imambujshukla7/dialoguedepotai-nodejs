@@ -1,69 +1,76 @@
+# Dialogue Depot AI - Node.js Backend
 
-# Dialogue-Depot
+Welcome to the backend of DialogueDepot AI, a robust chat platform with real-time messaging and AI-generated responses. This Node.js backend is responsible for handling server-side logic, API routes, and interactions with MongoDB.
 
-Dialogue-Depot is a Full Stack Chatting App.
-Uses Socket.io for real time communication and stores user details in encrypted format in Mongo DB Database.
+## Table of Contents
+- [Introduction](#introduction)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Setup](#setup)
+- [API Endpoints](#api-endpoints)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Introduction
+
+DialogueDepot AI is a MERN stack (MongoDB, Express.js, React.js, Node.js) chat platform with Socket.IO for real-time communication. The backend integrates a Flask API with a pre-trained ML model for AI-generated responses.
+
 ## Tech Stack
 
-**Client:** React JS
+- **Node.js and Express.js**: Backend server and API.
+- **MongoDB**: NoSQL database for storing user data, chats, and messages.
+- **JWT and Bcrypt**: User authentication and password hashing.
+- **Socket.IO**: Real-time WebSocket communication.
 
-**Server:** Node JS, Express JS
+## Project Structure
 
-**Database:** Mongo DB
-  
-## Demo
+- **config/**: MongoDB configuration files.
+- **controllers/**: Logic for handling API requests.
+- **middleware/**: Middleware for authentication and error handling.
+- **models/**: MongoDB models defining data structure.
+- **routes/**: API routes for user, chat, and message operations.
+- **server.js**: Entry point for the Node.js server.
 
-Go to the project directory
+## Setup
 
-```bash
-  cd mern-chat-app
-```
+1. Clone the repository:
+   ```bash
+   git clone <https://github.com/imambujshukla7/dialoguedepotai-nodejs>
+   cd dialogue-depot-nodejs
+   ```
 
-Install dependencies
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-```bash
-  npm install
-```
+3. Start the development server:
+   ```bash
+   npm start
+   ```
 
-```bash
-  cd frontend/
-  npm install
-```
+## API Endpoints
 
-Start the server
+- **POST /api/user/signup**: User registration.
+- **POST /api/user/login**: User login.
+- **GET /api/user/search**: Search for users.
+- **POST /api/chat**: Create a new chat.
+- **GET /api/chat**: Fetch user chats.
+- **POST /api/chat/group**: Create a group chat.
+- **PUT /api/chat/rename**: Rename a group chat.
+- **PUT /api/chat/groupremove**: Remove a user from a group.
+- **PUT /api/chat/groupadd**: Add a user to a group.
+- ... (and more)
 
-```bash
-  npm run start
-```
-Start the Client
+## Deployment
 
-```bash
-  //open now terminal
-  cd frontend
-  npm start
-```
+The backend is deployed on render, [dialoguedepotai.site](https://dialoguedepotai.site) is the complete application.
 
-  
-# Features
+## Contributing
 
-### Authenticaton
+We welcome contributions! Feel free to open issues, create pull requests, or provide feedback.
 
-### Real Time Chatting with Typing indicators
+## License
 
-### One to One chat
-
-### Search Users
-
-### Create Group Chats
-
-### Notifications 
-
-### Add or Remove users from group
-
-### View Other user Profile
-
-## Made By
-
-HacktivSpace Community
-
-  
+This project is licensed under the [MIT License](LICENSE).
